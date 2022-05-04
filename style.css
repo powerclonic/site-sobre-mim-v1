@@ -1,0 +1,65 @@
+body {
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+#copywarn-content {
+    background-color: #0005;
+}
+
+.warn--inv {
+    top: -100px;
+    transition: .5s;
+}
+
+.warn--vis {
+    top: 0;
+}
+
+.custom-card {
+    background-color: #0009;
+    border-radius: 10px;
+}
+
+.profile-image {
+    width: 125px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.tag {
+    font-size: 0.75rem;
+    border: 1px solid #555;
+}
+
+#texto-sociais {
+    text-align: center;
+    font-size: 0.8rem;
+    width: 15rem;
+    color: #bbb;
+}
+
+.divider {
+    width: 95%;
+    height: 0.25px;
+    background-color: #bbb;
+}
+
+#steam {
+    filter: invert(1);
+}
+
+#discord {
+    cursor: pointer;
+}
+
+.w-3 {
+    width: 2rem;
+    margin: 0 5px;
+}
