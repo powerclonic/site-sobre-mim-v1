@@ -5,11 +5,18 @@ const warningSuccess = document.querySelector('#copywarnSuccess')
 const warningError = document.querySelector('#copywarnError')
 
 discord.addEventListener('click', async () => {
-    const copy = await navigator.clipboard.writeText(`${discordTag.innerText}`)
+    navigator.clipboard.writeText(`${discordTag.innerText}`).then(() => {
+        warningSuccess.classList.add('warn--vis')
 
-    if (copy) {
-        warning.classList.add('warn--vis')
-    } else {
+        setTimeout(() => {
+            warningSuccess.classList.remove('warn--vis')
+        }, 2000)
+    }).catch(err => {
         warningError.classList.add('warn--vis')
-    }
+
+        console.log(err);
+        setTimeout(() => {
+            warningError.classList.remove('warn--vis')
+        }, 2000)
+    })
 })
